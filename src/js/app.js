@@ -8,3 +8,5 @@ document.addEventListener("DOMContentLoaded",()=> {
     });
 });
 
+let coursesData = [];
+let sortOrder = 1; 
