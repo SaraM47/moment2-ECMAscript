@@ -45,3 +45,12 @@ function printCourses(courses) {
         tableBody.appendChild(row);
   });
 };
+
+function filterCourses() {
+    const searchText = document.getElementById("search").value.toLowerCase();
+    const filteredCourses = coursesData.filter(course =>
+        course.code.toLowerCase().includes(searchText) || 
+        course.coursename.toLowerCase().includes(searchText)
+    );
+    printCourses(filteredCourses);
+}
