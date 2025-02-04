@@ -34,7 +34,7 @@ function printCourses(courses) {
     const tableBody = document.getElementById("table-body");
     tableBody.innerHTML = "";
 
-    courses.forEach(courses => {
+    courses.forEach(course => {
         const coursesRow = document.createElement("tr");
         coursesRow.innerHTML = `
         <td>${course.code}</td>
@@ -42,7 +42,7 @@ function printCourses(courses) {
         <td>${course.progression}</td>
         <td><a href="${course.syllabus}" target="_blank">Visa kursplan</a></td>
         `;
-        tableBody.appendChild(row);
+        tableBody.appendChild(coursesRow);
   });
 };
 
