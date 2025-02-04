@@ -21,7 +21,7 @@ async function fetchAndDisplayCourses() {
         }
 
         coursesData = await response.json();
-        displayCourses(coursesData);
+        printCourses(coursesData);
 
     } catch (error) {
         console.error(error);
@@ -29,3 +29,19 @@ async function fetchAndDisplayCourses() {
       "<p>Fel vid anslutning - prova igen senare!</p>";
     }
 }
+
+function printCourses(courses) {
+    const tableBody = document.getElementById("table-body");
+    tableBody.innerHTML = "";
+
+    courses.forEach(courses => {
+        const coursesRow = document.createElement("tr");
+        coursesRow.innerHTML = `
+        <td>${course.code}</td>
+        <td>${course.coursename}</td>
+        <td>${course.progression}</td>
+        <td><a href="${course.syllabus}" target="_blank">Visa kursplan</a></td>
+        `;
+        tableBody.appendChild(row);
+  });
+};
