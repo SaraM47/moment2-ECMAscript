@@ -54,3 +54,17 @@ function filterCourses() {
     );
     printCourses(filteredCourses);
 }
+
+function sortCourses(column) {
+    coursesData.sort((a, b) => {
+        const courseA = a[column].toLowerCase();
+        const courseB = b[column].toLowerCase();
+
+        if (courseA < courseB) return -1 * sortOrder;
+        if (courseA > courseB) return 1 * sortOrder;
+        return 0;
+    });
+
+    sortOrder *= -1;
+    printCourses(coursesData);
+}
