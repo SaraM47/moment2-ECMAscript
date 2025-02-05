@@ -63,42 +63,42 @@ td {
 }
 
 @media (max-width: 880px) {
-    body {
-      padding: 20px;
-    }
-  
-    .container {
-      width: 100%;
-      padding: 1.5rem;
-    }
-  
-    h1 {
-      font-size: 2em;
-      text-align: left;
-    }
-  
-    input[type="text"] {
-      font-size: 14px;
-      padding: 8px;
-      margin-bottom: 2rem;
-    }
-  
-    table {
-      font-size: 14px;
-      margin: 1rem 0;
-    }
-  
-    th, td {
-      font-size: 1em;
-      padding: 8px;
-    }
-  
+  body {
+    padding: 20px;
   }
 
-  @media (max-width: 420px) {
-    .container table {
-        display: block;
-        overflow-x: auto;
-        white-space: nowrap;
-      }
+  .container {
+    width: 100%;
+    padding: 1.5rem;
   }
+
+  h1 {
+    font-size: 2em;
+    text-align: left;
+  }
+
+  input[type="text"] {
+    font-size: 14px;
+    padding: 8px;
+    margin-bottom: 2rem;
+  }
+
+  table {
+    font-size: 14px;
+    margin: 1rem 0;
+  }
+
+  th,
+  td {
+    font-size: 1em;
+    padding: 8px;
+  }
+}
+
+@media (max-width: 420px) {
+  .container table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+}
